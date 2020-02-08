@@ -4617,21 +4617,23 @@ dl {
     border-color: #009DFF;
 }
 
-.btn-registry-way-submit:active,
+
+.btn-report-submit:active,
 .btn-registry-way-submit:hover {
     color: #FFFFFF;
     border-color: #004f80;
     background-color: #004f80;
 }
 
+.btn-detail-mypage,
 .btn-registry-way-cancel {
     font-weight: 800;
-    border-width: 1px;
     color: #3f5973;
     border-color: #3f5973;
 }
 
-.btn-registry-way-cancel:active,
+.btn-detail-mypage:hover,
+.btn-report-cancel:active,
 .btn-registry-way-cancel:hover {
     font-weight: 900;
     color: #3f5973;
@@ -5185,6 +5187,13 @@ body.is-touch .project_detail_tile article .content {
 #profile-img {
     width: 100px;
     height: 100px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+#detail-mypage-profile-img {
+    width: 150px;
+    height: 150px; 
     border-radius: 70%;
     overflow: hidden;
 }
