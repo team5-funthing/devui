@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    
+
+    <!-- Include the styles for the plugin -->
+    <link href="css/jquery.gpopover.css" rel="stylesheet">
+
+    <!-- Include jQuery and the jquery.gpopover plugin -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.gpopover.js"></script>
+
+
+
+    <script>
+        $(function () {
+
+            // Use default options for the left and middle buttons
+            $('#trigger-one, #trigger-two').gpopover();
+
+            // Use custom options for the right button
+            $('#trigger-three').gpopover({
+                width: 400,
+                preventHide: true,
+                onShow: function () {
+                    if (console && console.log) console.log("Popover shown.");
+                },
+                onHide: function () {
+                    if (console && console.log) console.log("Popover hidden.");
+                }
+            });
+
+
+            /* Set up a click handler for the #trigger-code button which will
+               cause a countdown which shows and hides the popover in code. */
+            $('#trigger-code').click(function (e) {
+                var remaining = 3,
+                    $button = $(this),
+                    originalText = $button.text();
+
+                $button.text('Showing in ' + remaining + "...");
+                $button.attr('disabled', 'disabled');
+
+                // Set up interval
+                var interval = setInterval(function () {
+                    remaining -= 1;
+
+                    if (remaining > 0)
+                        $button.text('Showing in ' + remaining + "...");
+                    else
+                        $button.text('Hiding in ' + -((-remaining) - 5) + "...");
+
+                    if (remaining == 0) {
+                        // Trigger the show for the popover
+                        // (note: it must have been initialised first)
+                        $('#trigger-one').gpopover('show');
+                    } else if (remaining <= -5) {
+                        // Trigger the hide for the popover
+                        $('#trigger-one').gpopover('hide');
+
+                        // Cancel this interval
+                        clearInterval(interval);
+                        $button.text(originalText);
+                        $button.removeAttr('disabled');
+                    }
+                }, 1000);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    
+    <h1>jquery-gpopover</h1>
+
+    <button id="trigger-three" data-popover="popover-three" class="btn btn-danger">Right Edge</button>
+    </div>
+
+    <!-- Popover element for the 'Example 3' button -->
+    <div id="popover-three" class="gpopover">
+        This popover has some custom options set:
+        <pre> 테스트테스테테ㅡ세트ㅔ스ㅔㅌ스</pre>
+
+    </div>
+
+</body>
+
+</html>

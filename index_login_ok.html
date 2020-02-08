@@ -1,0 +1,1018 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Montana</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/jquery.gpopover.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Include jQuery and the jquery.gpopover plugin -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.gpopover.js"></script>
+
+    <script>
+        $(function () {
+
+            // Use default options for the left and middle buttons
+            // $('#trigger-one, #trigger-two').gpopover();
+
+            // Use custom options for the right button
+            $('#mypage-btn').gpopover({
+                width: 400,
+                preventHide: true,
+                onShow: function () {
+                    if (console && console.log) console.log("Popover shown.");
+                },
+                onHide: function () {
+                    if (console && console.log) console.log("Popover hidden.");
+                }
+            });
+
+
+            /* Set up a click handler for the #trigger-code button which will
+               cause a countdown which shows and hides the popover in code. */
+            $('#trigger-code').click(function (e) {
+                var remaining = 3,
+                    $button = $(this),
+                    originalText = $button.text();
+
+                $button.text('Showing in ' + remaining + "...");
+                $button.attr('disabled', 'disabled');
+
+                // Set up interval
+                // var interval = setInterval(function () {
+                //     remaining -= 1;
+
+                //     if (remaining > 0)
+                //         $button.text('Showing in ' + remaining + "...");
+                //     else
+                //         $button.text('Hiding in ' + -((-remaining) - 5) + "...");
+
+                //     if (remaining == 0) {
+                //         // Trigger the show for the popover
+                //         // (note: it must have been initialised first)
+                //         $('#trigger-one').gpopover('show');
+                //     } else if (remaining <= -5) {
+                //         // Trigger the hide for the popover
+                //         $('#trigger-one').gpopover('hide');
+
+                //         // Cancel this interval
+                //         clearInterval(interval);
+                //         $button.text(originalText);
+                //         $button.removeAttr('disabled');
+                //     }
+                // }, 1000);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Popover element for the 'Example 3' button -->
+    <div id="popover-mypage-menu" class="gpopover">
+        <div class="container-fluid">
+            <div>
+                <div>
+                    <div class="d-flex justify-content-around bd-highlight mb-3">
+                        <div class="p-2 bd-highlight">메시지</div>
+                        <div class="p-2 bd-highlight">알림</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex justify-content-around bd-highlight mb-3">
+                        <div class="p-2 bd-highlight"><a href="show-myProjects.html">창작한</a></div>
+                        <div class="p-2 bd-highlight"><a href="show-filteredProjects.html">후원한</a></div>
+                        <div class="p-2 bd-highlight"><a href="show-filteredProjects.html">반응한</a></div>
+                        <div class="p-2 bd-highlight"><span class="fa fa-heart"><a href="show-filteredProjects.html">좋아한</a></span></div>
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">보안 인증 하시면 좋데요</h5>
+                            <small>3 days ago</small>
+                          </div>
+                          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                          <small></small>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column bd-highlight mb-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#"><h3>프로필 설정</h3></a></li>
+                        <li class="list-group-item"><a href="#"><h3>후원 결제 내역</h3></a></li>
+                        <li class="list-group-item"><a href="#"><h3>수입 내역</h3></a></li>
+                        <li class="list-group-item"><a href="#"><h3>로그아웃 하기</h3></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div id="sticky-header-align" class="row align-self-center no-gutters">
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="main-menu d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="#">프로젝트 보기 <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="show-projects.html">모든 프로젝트</a></li>
+                                                <li><a href="#">리워드 프로젝트</a></li>
+                                                <li><a href="#">후원 프로젝트</a></li>
+                                                <hr />
+                                                <li><a href="#">인기 프로젝트</a></li>
+                                                <li><a href="#">마감임박 프로젝트</a></li>
+                                                <li><a href="#">신규 프로젝트</a></li>
+                                                <hr />
+                                                <li><a href="#">기획전 보러가기</a></li>
+                                            </ul>
+                                        <li><a href="create-project-start.html">프로젝트 올리기</a></li>
+                                        <li><a href="#">더 보기 <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="#"></a></li>
+                                                <li><a href="#">반응보기</a></li>
+                                                <li><a href="#">elements3</a></li>
+                                                <li><a href="#">elements4</a></li>
+                                                <li><a href="#">elements5</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 ">
+                            <div class="logo-img">
+                                <a href="index.html">
+                                    <h2 class="logo">FUN THING</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-4 d-none d-lg-block">
+                            <div class="nav_right">
+
+                                <div class="#">
+                                    <a class="popup-with-form" href="#"><span class="fa fa-bell pr-3"></span></a>
+                                </div>
+
+                                <div class="search_icon">
+                                    <a class="popup-with-form" href="#search-popup"><span class="fa fa-search pr-1"></span></a>
+                                </div>
+                                <div class="mypage_btn d-none d-lg-block ml-3">
+                                    <button id="mypage-btn" data-popover="popover-mypage-menu">마이페이지</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>FunThing</h3>
+                                <p>Fun하게 투자받고 Fun하게 올리고
+                                    편하게 지원받자</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Life is Beautiful</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Montana Resort</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Life is Beautiful</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="about_info">
+                        <div class="section_title mb-20px">
+                            <span>About Us</span>
+                            <h3>이 프로젝트 어때요?</h3>
+                        </div>
+                        <p></p>
+                        <a href="#" class="line-button">보러가기</a>
+                    </div>
+                    <hr>
+                    <p>
+                        추천 프로젝트 설명 부분.
+                        추천 프로젝트 설명 부분.
+                        추천 프로젝트 설명 부분.
+                        추천 프로젝트 설명 부분.
+                    </p>
+                </div>
+                <div class="col-xl-7 col-lg-7">
+                    <div class="about_thumb d-flex">
+                        <div class="img_1">
+                            <img src="img/test/3.jpg" alt="">
+                        </div>
+                        <div class="img_2">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+
+    <!-- 기획전 -->
+    <div class="container ">
+        <div class="features_room">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_title text-center mb-30">
+                            <span>사진 크기를 일정하게 보이도록 올리도록 수정해야한다</span>
+                            <h3>기획전</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rooms_here">
+                <div class="single_rooms">
+                    <div class="room_thumb">
+                        <img src="img/test/6.jpg" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span></span>
+                                <h3>기획전1 </h3>
+                            </div>
+                            <a href="#" class="line-button">book now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_rooms">
+                    <div class="room_thumb">
+                        <img src="img/test/7.jpg" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span></span>
+                                <h3>기획전2</h3>
+                            </div>
+                            <a href="#" class="line-button">book now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_rooms">
+                    <div class="room_thumb">
+                        <img src="img/test/8.jpg" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span></span>
+                                <h3>기획전3</h3>
+                            </div>
+                            <a href="#" class="line-button">book now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single_rooms">
+                    <div class="room_thumb">
+                        <img src="img/test/9.jpg" alt="">
+                        <div class="room_heading d-flex justify-content-between align-items-center">
+                            <div class="room_heading_inner">
+                                <span>여기는 설명란</span>
+                                <h3>기획전 더 보기</h3>
+                            </div>
+                            <a href="#" class="line-button">book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 기획전 _ end -->
+
+    <!-- 기획전 프로젝트 슬라이더 -->
+    <div class="container ">
+        <div class="section-top-border">
+            <h3 class="mb-30">진행중인 기획전</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="single-defination">
+                        <h4 class="mb-20">진행중인 기획전</h4>
+                        <p>슬라이더 형식으로 만들기</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-defination">
+                        <h4 class="mb-20">진행중인 기획전</h4>
+                        <p>Recently, the US Federal government banned online casinos from operating in America by
+                            making it illegal to
+                            transfer money to them through any US bank or payment system. As a result of this law,
+                            most of the popular
+                            online casino networks</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-defination">
+                        <h4 class="mb-20">진행중인 기획전</h4>
+                        <p>Recently, the US Federal government banned online casinos from operating in America by
+                            making it illegal to
+                            transfer money to them through any US bank or payment system. As a result of this law,
+                            most of the popular
+                            online casino networks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- offers_area_start -->
+    <div class="offers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-3">
+                        <span>인기 몰이 중!</span>
+                        <h3>인기 프로젝트!</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb thumbnail">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 50%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 90%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 10%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers_area_end -->
+
+    <!-- offers_area_start -->
+    <div class="offers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-3">
+                        <span>이목 집중!</span>
+                        <h3>신규 프로젝트</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers_area_end -->
+    <!-- offers_area_start -->
+    <div class="offers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-3">
+                        <span>성공 임박!</span>
+                        <h3>성공 임박 프로젝트!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="project">
+                        <div class="about_thumb">
+                            <a href="project-details.html"><img src="img/test/1.jpg" alt=""></a>
+                        </div>
+                        <h3>BEAMS X Paperboy</h3>
+                        <ul>
+                            <li>Luxaries condition</li>
+                            <li>3 Adults & 2 Children size</li>
+                            <li>Sea view side</li>
+                        </ul>
+                        <div class="mt-10">
+                            <div class="percentage">
+                                <p>2,352,000원 30% </p>
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width: 30%"
+                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- offers_area_end -->
+
+    <!-- video_area_start -->
+    <!-- <div class="video_area video_bg overlay">
+        <div class="video_area_inner text-center">
+            <span>#</span>
+            <h3>##</h3>
+            <a href="#" class="video_btn popup-video">
+                <i class="fa fa-play"></i>
+            </a>
+        </div>
+    </div> -->
+    <!-- video_area_end -->
+
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-7">
+                    <div class="about_thumb2 d-flex">
+                        <div class="img_1">
+                            <img src="img/about/1.png" alt="">
+                        </div>
+                        <div class="img_2">
+                            <img src="img/about/2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5">
+                    <div class="about_info">
+                        <div class="section_title mb-20px">
+                            <span>Delicious Food</span>
+                            <h3>We Serve Fresh and <br>
+                                Delicious Food</h3>
+                        </div>
+                        <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
+                            dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
+                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
+                        <a href="#" class="line-button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_end -->
+
+    <!-- instragram_area_start -->
+    <div class="instragram_area">
+        <div class="single_instagram">
+            <img src="img/instragram/1.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="img/instragram/2.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="img/instragram/3.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="img/instragram/4.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="img/instragram/5.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- instragram_area_end -->
+
+    <!-- forQuery_start -->
+    <div class="forQuery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-md-12">
+                    <div class="Query_border">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-xl-6 col-md-6">
+                                <div class="Query_text">
+                                    <p>Funthing에서 서포트 받아보세요</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6">
+                                <div class="pj_btn">
+                                    <a href="#" class="registerProject">프로젝트 올리러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- forQuery_end-->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                address
+                            </h3>
+                            <p class="footer_text"> 200, Green road, Mongla, <br>
+                                New Yor City USA</p>
+                            <a href="#" class="line-button">Get Direction</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Reservation
+                            </h3>
+                            <p class="footer_text">+10 367 267 2678 <br>
+                                reservation@montana.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Navigation
+                            </h3>
+                            <ul>
+                                <li><a href="#">메뉴</a></li>
+                                <li><a href="#">Rooms</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Newsletter
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Enter your mail">
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p class="newsletter_text">Subscribe newsletter to get updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-8 col-md-7 col-lg-9">
+                        <p class="copy_right">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                    <div class="col-xl-3 col-md-5 col-lg-3">
+                        <div class="socail_links">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- link that opens popup -->
+
+    <!-- 마이페이지 팝업-->
+
+    <form id="mypage-popup" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <h3>마이페이지</h3>
+
+
+            </div>
+        </div>
+    </form>
+    <!-- 마이페이지 팝업 end-->
+
+
+
+
+    <!-- 검색 폼 -->
+    <form id="search-popup" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <aside class="single_sidebar_widget search_widget">
+                    <form action="#">
+                        인기태그 : #내눈깔 #하늘vs정호 #직배송 #귱
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder='찾으시는 프로젝트가 있으신가요?'
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = '검색어를 입력해 주세요.'">
+                                <div class="input-group-append">
+                                    <button class="btn" type="button"><i class="ti-search"></i></button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <aside class="single_sidebar_widget post_category_widget">
+                                    <h4 class="widget_title">인기 검색어</h4>
+                                    <ul class="list cat-list">
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Resaurant food</p>
+                                                <p>(37)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Travel news</p>
+                                                <p>(10)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Modern technology</p>
+                                                <p>(03)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Product</p>
+                                                <p>(11)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Inspiration</p>
+                                                <p>(21)</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="d-flex">
+                                                <p>Health Care</p>
+                                                <p>(21)</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </aside>
+                                <aside class="single_sidebar_widget tag_cloud_widget">
+                                    <h4 class="widget_title">Tag Clouds</h4>
+                                    <ul class="list">
+                                        <li>
+                                            <a href="#" class="genric-btn primary small tag-keyword">#여긴 어디</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="genric-btn info small tag-keyword">#여긴 어디</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="genric-btn primary small tag-keyword">#나는 누구</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="genric-btn info small tag-keyword">#여긴 어디</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="genric-btn primary small tag-keyword">#나는 어디</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="genric-btn primary small tag-keyword">#여긴 누구</a>
+                                        </li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </form>
+    <!-- 검색폼 end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

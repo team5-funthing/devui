@@ -1,0 +1,242 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Montana</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/jquery.gpopover.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Include jQuery and the jquery.gpopover plugin -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.gpopover.js"></script>
+
+    <script>
+        $(function () {
+
+            // Use default options for the left and middle buttons
+            // $('#trigger-one, #trigger-two').gpopover();
+
+            // Use custom options for the right button
+            $('#mypage-btn').gpopover({
+                width: 400,
+                preventHide: true,
+                onShow: function () {
+                    if (console && console.log) console.log("Popover shown.");
+                },
+                onHide: function () {
+                    if (console && console.log) console.log("Popover hidden.");
+                }
+            });
+
+
+            /* Set up a click handler for the #trigger-code button which will
+               cause a countdown which shows and hides the popover in code. */
+            $('#trigger-code').click(function (e) {
+                var remaining = 3,
+                    $button = $(this),
+                    originalText = $button.text();
+
+                $button.text('Showing in ' + remaining + "...");
+                $button.attr('disabled', 'disabled');
+
+                // Set up interval
+                // var interval = setInterval(function () {
+                //     remaining -= 1;
+
+                //     if (remaining > 0)
+                //         $button.text('Showing in ' + remaining + "...");
+                //     else
+                //         $button.text('Hiding in ' + -((-remaining) - 5) + "...");
+
+                //     if (remaining == 0) {
+                //         // Trigger the show for the popover
+                //         // (note: it must have been initialised first)
+                //         $('#trigger-one').gpopover('show');
+                //     } else if (remaining <= -5) {
+                //         // Trigger the hide for the popover
+                //         $('#trigger-one').gpopover('hide');
+
+                //         // Cancel this interval
+                //         clearInterval(interval);
+                //         $button.text(originalText);
+                //         $button.removeAttr('disabled');
+                //     }
+                // }, 1000);
+            });
+
+        });
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <h1>만든 프로젝트</h1>
+        </div>
+
+        <hr>
+        <section class="tiles">
+            
+            <div class="row">
+                <div class="h4">test.html</div>
+            </div>
+
+            <!----------------만든 프로젝트 양식 -------------------->
+            <article>
+                <div class="project">
+                    <div class="card">
+                        <div class="thumbnail-wrap">
+                            <div class="thumbnail">
+                                <div class="centered">
+                                    <img src="./img/test/1.jpg" class="card-img-top portrait" alt="1.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">만든 프로젝트 제목1</h5>
+                            <ul>
+                                <li>요약 설명 : </li>
+                                <li>
+                                    목표 금액 :</li>
+                                <li>기간 : </li>
+                            </ul>
+
+                            <p>현재 후원받은 금액 : -----원 --- % </p>
+                            <div class="progress">
+                                <div class="progress-bar color-7" role="progressbar" style="width: 50%" aria-valuenow="30"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card-footer">
+                            <a href="#">스튜디오 가기</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 추가적으로 목록들 생길 시 JSTL로 반복 추가-->
+        </section>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="col">
+                    <section class="project_detail_tile">
+                        <article>
+                            <div class="project">
+                                <div class="thumbnail-wrap">
+                                    <div class="thumbnail">
+                                        <div class="centered">
+                                            <img src="./img/test/6.jpg" class="card-img-top landscape" alt="1.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <div class="h4">
+                                       프로젝트 제목
+                                    </div>
+                                 </div>
+                                 <div class="p-2 bd-highlight align-self-start">
+                                    <span>모인금액</span>
+                                    <div class="h4">
+                                       ----- 원
+                                       <div class="h5">
+                                          ---- % 달성중
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="p-2 bd-highlight">
+                                    <div class="h5">
+                                       남은 기간
+                                    </div>
+                                    <div class="h4">
+                                       --일
+                                    </div>
+                                 </div>
+                                 <div class="p-2 bd-highlight">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                                       펀딩하기
+                                    </button>
+                                 </div>
+                              </div>    
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+            <!-- <div class="col-sm-4">
+                
+            </div> -->
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+<!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
+
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
