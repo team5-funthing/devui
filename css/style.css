@@ -4617,6 +4617,22 @@ dl {
     border-color: #ffe484;
 }
 
+/* 주소검색 버튼 */
+.btn-find-zipcode {
+    font-weight: 800;
+    color: #2a2730;
+    background-color: #ffe484;
+    border-color: #ffe484;
+}
+
+.btn-find-zipcode:active,
+.btn-find-zipcode:hover {
+    font-weight: 800;
+    color: #e5cf80;
+    border-color: #e5cf80;
+    background-color: #ffffff;
+}
+
 /* #009DFF */
 
 .btn-registry-way-submit {
