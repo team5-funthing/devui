@@ -350,3 +350,16 @@ mailChimp();
 $('.popover-dismiss').popover({
   trigger: 'focus'
 })
+
+
+// select-reward 수량 등록 태그 추가
+$("#select-checkbox").on("click", function() {  
+  var check = $("#select-checkbox").is(":checked");
+  console.log(check);
+  if(check){
+    $(".to-add-place")
+    .append('<div class="to-remove-tag mt-2"><p class="card-text m-auto">수량</p><div class="row align-items-md-center mb-4"><i class="fas fa-minus ml-3"></i><input class="form-control ml-2 mr-2" style="width:50px;" type="text" placeholder=""><i class="fas fa-plus"></i></div></div>');
+  }else{
+    $("div").remove('.to-remove-tag');
+  }
+});

@@ -2927,15 +2927,18 @@ h6 {
     border: none
 }
 
+
+.select-checkbox,
 .confirm-checkbox {
-    width: 16px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
     border-radius: 3px;
     background: #f9f9ff;
     position: relative;
     cursor: pointer
 }
 
+.select-checkbox input,
 .confirm-checkbox input {
     position: absolute;
     left: 0;
@@ -2947,6 +2950,7 @@ h6 {
     opacity: 0
 }
 
+.select-checkbox input+label, 
 .confirm-checkbox input+label {
     position: absolute;
     left: 0;
@@ -2960,7 +2964,12 @@ h6 {
     border: 1px solid #f1f1f1
 }
 
-.confirm-checkbox input:checked+label {
+.select-checkbox input:checked+label {
+    background: url(../img/elements/select-check.png) no-repeat center center/cover;
+    border: none
+}
+
+.confirm-checkbox input:checked+label{
     background: url(../img/elements/success-check.png) no-repeat center center/cover;
     border: none
 }
@@ -5054,34 +5063,6 @@ body.is-touch .tiles article .content {
     opacity: 0;
 }
 
-.project_detail_tile article>a .content> :last-child {
-    margin-bottom: 0;
-}
-
-.project_detail_tile article.style1>.image:before {
-    background-color: #f2849e;
-}
-
-.project_detail_tile article.style2>.image:before {
-    background-color: #7ecaf6;
-}
-
-.project_detail_tile article.style3>.image:before {
-    background-color: #7bd0c1;
-}
-
-.project_detail_tile article.style4>.image:before {
-    background-color: #c75b9b;
-}
-
-.project_detail_tile article.style5>.image:before {
-    background-color: #ae85ca;
-}
-
-.project_detail_tile .style6>.image:before {
-    background-color: #8499e7;
-}
-
 body:not(.is-touch) .project_detail_tile article:hover>.image {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -5210,5 +5191,12 @@ body.is-touch .project_detail_tile article .content {
     height: 70px; 
     border-radius: 70%;
     border: 0px;
+    overflow: hidden;
+}
+
+.order-circle{
+    width: 120px;
+    height: 120px; 
+    border-radius: 70%;
     overflow: hidden;
 }
